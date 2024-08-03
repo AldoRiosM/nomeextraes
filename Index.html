@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te Amo Atte El Inge</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            flex-direction: column;
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+        }
+        .heart {
+            font-size: 100px;
+            color: red;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .heart:hover {
+            transform: scale(1.2);
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #ff6666;
+            min-height: 30px;
+        }
+        .instruction {
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="instruction">Dale click al corazón cuando me extrañes</div>
+    <div class="container">
+        <div class="heart">❤️</div>
+        <div class="message" id="message"></div>
+    </div>
+    <script>
+        const heart = document.querySelector('.heart');
+        const message = document.getElementById('message');
+
+        const messages = [
+            '¡Te amo!',
+            'Eres mi todo 💖',
+            '¡Eres increíble!',
+            'Siempre contigo 💕',
+            'Mi amor eterno ❤️',
+            'Eres mi vida 🌟',
+            'Eres mi sueño hecho realidad 💫',
+            'Gracias por existir 💓',
+            'Eres mi razón de ser 💝',
+            'Cada día te amo más 💗',
+            'Eres mi sol en un día nublado ☀️',
+            'Eres perfecta para mí 🌹',
+            'Eres mi felicidad 🥰',
+            'Contigo, todo es mejor 🌈',
+            'Eres mi inspiración 🌟',
+            'Eres el amor de mi vida 💞',
+            'No puedo imaginar mi vida sin ti 💍',
+            'Eres mi mejor aventura 🚀',
+            'Eres mi para siempre 💑',
+            'Mi corazón es tuyo 💖',
+            'Eres mi princesa 👑',
+            'Te extraño mucho 🥺',
+            'Eres lo mejor que me ha pasado 🌷',
+            'No hay nadie como tú 💕',
+            'Eres mi sueño hecho realidad 🌟',
+            'Eres mi media naranja 🍊',
+            'Eres mi razón de sonreír 😊',
+            'Eres mi ángel 😇',
+            'Me haces muy feliz 😊',
+            'Te adoro ❤️',
+            'Eres mi luz en la oscuridad 🌟',
+            'Eres mi persona favorita 🥰',
+            'Eres mi confidente 🤗',
+            'Te llevo en mi corazón siempre 💖',
+            'Eres mi amor eterno ❤️',
+            'Eres mi destino 💫',
+            'Eres mi mundo 🌎',
+            'Eres mi sol 🌞',
+            'Eres mi estrella ⭐',
+            'Eres mi tesoro 💎',
+            'Eres mi vida 💓'
+        ];
+
+        heart.addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            message.textContent = messages[randomIndex];
+        });
+    </script>
+</body>
+</html>
